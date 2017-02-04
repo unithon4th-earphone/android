@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         items = new ArrayList<ItemDatas>();
-        items.add(new ItemDatas(R.drawable.splash_background_1, "Seoul", "5"));
-        items.add(new ItemDatas(R.drawable.splash_background_2, "Busan", "3"));
-        items.add(new ItemDatas(R.drawable.splash_background_3, "Suwon", "2"));
-        items.add(new ItemDatas(R.drawable.splash_background_1, "Jeju", "5"));
-        items.add(new ItemDatas(R.drawable.splash_background_2, "Daegu", "4"));
-        items.add(new ItemDatas(R.drawable.splash_background_3, "Ulsan", "4"));
-        items.add(new ItemDatas(R.drawable.splash_background_1, "Seoul", "5"));
-        items.add(new ItemDatas(R.drawable.splash_background_2, "Seoul", "5"));
+        items.add(new ItemDatas(R.drawable.splash_background_1, "Seoul", "유 지은"));
+        items.add(new ItemDatas(R.drawable.splash_background_2, "Busan", "김 건우"));
+        items.add(new ItemDatas(R.drawable.splash_background_3, "Suwon", "박 민아"));
+        items.add(new ItemDatas(R.drawable.splash_background_1, "Jeju", "이 동건"));
+        items.add(new ItemDatas(R.drawable.splash_background_2, "Daegu", "양 용기"));
+        items.add(new ItemDatas(R.drawable.splash_background_3, "Ulsan", "김 대경"));
+        items.add(new ItemDatas(R.drawable.splash_background_1, "Seoul", "김 태희"));
+        items.add(new ItemDatas(R.drawable.splash_background_2, "Seoul", "한 소희"));
 
         menuOpenBtn = (Button)findViewById(R.id.menu_open_btn);
         slidingPage = (LinearLayout)findViewById(R.id.slidingPage);
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
+                        finish();
                         break;
                     case 1:
                         intent = new Intent(getApplicationContext(), Login.class);
@@ -82,7 +83,9 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 3:
-
+//                        intent new Intent(getApplicationContext(), MyPage.class);
+//                        startActivity(intent);
+//                        break;
                 }
             }
         });

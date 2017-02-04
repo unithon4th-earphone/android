@@ -1,6 +1,7 @@
 package earphone.unithon4th.tripear.recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import earphone.unithon4th.tripear.Preview;
 import earphone.unithon4th.tripear.R;
 
 /**
@@ -34,10 +36,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         holder.area.setText(values.get(position).area);
         holder.grade.setText(values.get(position).grade);
         holder.linearLayout.setBackgroundResource(values.get(position).background);
+
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String area = holder.area.getText().toString();
+                final String grade = holder.grade.getText().toString();
+                Intent intent = new Intent(v.getContext(), Preview.class);
+                intent.putExtra("area", area);
+                intent.putExtra("name", grade);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
