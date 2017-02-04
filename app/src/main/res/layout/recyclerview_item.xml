@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="190dp"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:id="@+id/recyclerView"
+    android:background="@drawable/splash_image"
+    android:gravity="bottom|center">
+    <TextView
+        android:id="@+id/area_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="sample"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:id="@+id/area_grade"
+        android:layout_alignBottom="@+id/area_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="별점"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
