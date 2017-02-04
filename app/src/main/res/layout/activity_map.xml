@@ -56,6 +56,6 @@
             android:id="@+id/addedAreaList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:choiceMode="singleChoice"></ListView>
+            android:choiceMode="multipleChoice"></ListView>
     </LinearLayout>
 </LinearLayout>
